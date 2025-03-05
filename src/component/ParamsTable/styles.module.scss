@@ -1,0 +1,106 @@
+@import "~/styles/variables.module.scss";
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+
+  :global {
+    table {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border-collapse: separate;
+      border-spacing: 0px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+
+      tbody {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        flex: 1;
+
+        tr:hover {
+          background: $colorSecondaryBackground;
+        }
+      }
+
+      tr {
+        box-sizing: border-box;
+        table-layout: fixed;
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid $colorDivider;
+      }
+
+      th {
+        box-sizing: border-box;
+        font-weight: 500;
+        text-align: left;
+        font-size: $fontSmall;
+        line-height: $fontMedium * 2;
+        padding: 0 $spacingMedium;
+      }
+
+      td {
+        box-sizing: border-box;
+        text-align: left;
+        padding: 0 $spacingMedium;
+      }
+
+      th:first-child,
+      td:first-child {
+        width: 30%;
+      }
+
+      th:last-child,
+      td:last-child {
+        width: 100px;
+        box-sizing: content-box;
+        padding-right: $spacingMedium * 3;
+        position: relative;
+      }
+
+      .del {
+        position: absolute;
+        top: $fontSmall - $spacingLarge / 2;
+        right: $spacingSmall;
+        height: $spacingLarge;
+        width: $spacingLarge;
+        border-radius: $spacingLarge / 2;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .del:hover {
+        background: $colorTextUltraLight;
+      }
+
+      tr:hover .del {
+        visibility: visible;
+      }
+
+      input {
+        padding: 0;
+        margin: 0;
+        background: none;
+        outline: none;
+        border: none;
+        color: $colorTextDark;
+        font-size: $fontextraSmall;
+        line-height: $fontsmall * 2;
+        width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

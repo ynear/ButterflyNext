@@ -1,0 +1,31 @@
+@import "~/styles/variables.module.scss";
+
+.configGroup {
+  display: flex;
+  align-items: center;
+  padding: $spacingXsmall 0;
+
+  :global {
+    .title {
+      width: 100px;
+      flex: 0 0 auto;
+      color: $colorTextDark;
+    }
+
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      button {
+        margin-left: $spacingXsmall;
+      }
+    }
+
+    .fix-width {
+      width: $spacingXsWidth + $spacingXxsWidth;
+      margin: 0 $spacingXsmall;
+    }
+  }
+}

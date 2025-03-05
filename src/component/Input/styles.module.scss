@@ -1,0 +1,80 @@
+@import "~/styles/variables.module.scss";
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacingMedium;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid $colorDivider;
+
+  :global {
+    input {
+      line-height: $fontSmall;
+      font-size: $fontSmall;
+      color: $colorTextDark;
+      background: none;
+      outline: none;
+      border: none;
+      width: 100%;
+      flex: 1;
+    }
+
+    .title {
+      line-height: $fontExtraExtraSmall;
+      font-size: $fontExtraExtraSmall;
+      padding: 0 $spacingXxsmall;
+      position: absolute;
+      top: -$fontExtraExtraSmall / 2;
+      left: $spacingMedium;
+      background: $colorPrimaryBackground;
+    }
+
+    .layout-placeholder {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.error {
+  border: 1px solid $colorRed;
+  animation: inputShake 0.3s ease-out 1;
+
+  :global {
+    .title {
+      color: $colorRed;
+    }
+  }
+}
+
+.active {
+  border: 1px solid $colorActive;
+
+  :global {
+    .title {
+      color: $colorActive;
+    }
+  }
+}
+
+@keyframes inputShake {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

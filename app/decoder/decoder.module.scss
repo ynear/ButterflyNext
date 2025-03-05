@@ -1,0 +1,35 @@
+@import "~/styles/variables.module.scss";
+
+.subPageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  padding: $spacingMedium;
+}
+
+.paramGroup {
+  display: flex;
+  align-items: center;
+  padding: $spacingXsmall 0;
+
+  :global {
+    .title {
+      width: 100px;
+      flex: 0 0 auto;
+      color: $colorTextDark;
+    }
+
+    .items {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    button {
+      margin-right: $spacingXsmall;
+    }
+  }
+}

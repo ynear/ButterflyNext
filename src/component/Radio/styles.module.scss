@@ -1,0 +1,43 @@
+@import "~/styles/variables.module.scss";
+
+.radio {
+  display: flex;
+  align-items: center;
+  color: $colorTextDark;
+  line-height: $spacingLarge;
+  font-size: $fontExtraSmall;
+  padding: 0 $spacingXsmall;
+
+  :global {
+    div {
+      height: $spacingLarge;
+      width: $spacingLarge;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $spacingLarge / 2;
+
+      &:hover {
+        background-color: rgba(29, 233, 182, 0.3);
+      }
+    }
+
+    span {
+      display: block;
+      height: $spacingXsmall;
+      width: $spacingXsmall;
+      border-radius: $spacingXsmall / 2;
+      background: "none";
+      box-shadow: 0 0 0 2px $colorPrimaryBackground, 0 0 0 4px $colorTextLight;
+    }
+  }
+}
+
+.active {
+  :global {
+    span {
+      background-color: $colorActive;
+      box-shadow: 0 0 0 2px $colorPrimaryBackground, 0 0 0 4px $colorActive;
+    }
+  }
+}

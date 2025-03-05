@@ -1,0 +1,29 @@
+@import "~/styles/variables.module.scss";
+
+.container {
+  flex-direction: row;
+  padding: $spacingXlarge;
+}
+
+.paramGroup {
+  :global {
+    .items {
+      input:disabled {
+        color: $colorTextUltraLight;
+      }
+    }
+  }
+}
+
+.resultListContainer {
+  margin: 0;
+}
+
+.optionContainer {
+  width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}

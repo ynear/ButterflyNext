@@ -1,0 +1,26 @@
+@import "~/styles/variables.module.scss";
+
+.hexGroup {
+  display: flex;
+  align-items: center;
+  padding: $spacingXsmall 0;
+
+  :global {
+    .title {
+      width: 50px;
+      flex: 0 0 auto;
+      color: $colorTextDark;
+    }
+
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .fix-width {
+      width: $spacingGutter;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "~/styles/variables.module.scss";
+
+.resultContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  :global {
+    ul {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      margin: 0;
+      padding: 0;
+    }
+
+    .button-container {
+      position: absolute;
+      top: $spacingSmall;
+      right: $spacingSmall;
+
+      button {
+        margin: 0 $spacingXxsmall;
+      }
+    }
+
+    .totalLength {
+      position: absolute;
+      bottom: $spacingSmall;
+      right: $spacingSmall;
+      padding: $spacingXxsmall $spacingSmall;
+      background: $colorSecondaryBackground;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+}
+
+.resultItem {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  padding: $spacingXsmall;
+  margin: 2px;
+  background: $colorPrimaryBackground;
+  list-style: none;
+  color: $colorTextDark;
+}

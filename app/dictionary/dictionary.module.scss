@@ -1,0 +1,43 @@
+@import "~/styles/variables.module.scss";
+
+.subPageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  padding: $spacingMedium;
+}
+
+.paramGroup {
+  display: flex;
+  align-items: center;
+  padding: $spacingXsmall 0;
+
+  :global {
+    .title {
+      width: 125px;
+      flex: 0 0 auto;
+      color: $colorTextDark;
+    }
+
+    .items {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.resultListContainer {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  overflow: hidden;
+  padding: $spacingMedium;
+  margin: $spacingMedium 0;
+  border-radius: 10px;
+  background: $colorSecondaryBackground;
+}

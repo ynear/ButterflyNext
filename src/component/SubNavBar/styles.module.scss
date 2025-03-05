@@ -1,0 +1,26 @@
+@import "~/styles/variables.module.scss";
+
+.toolList {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid $colorDivider;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.toolItem {
+  padding: $spacingSmall;
+  text-align: center;
+  color: $colorTextDark;
+  cursor: pointer;
+}
+
+.toolItem:hover {
+  background: $colorBackground;
+}
+
+.active {
+  color: $colorActive;
+  background: $colorBackground;
+}

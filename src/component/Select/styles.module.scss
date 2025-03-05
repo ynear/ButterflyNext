@@ -1,0 +1,80 @@
+@import "~/styles/variables.module.scss";
+
+.selectBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: $fontSmall;
+  font-size: $fontSmall;
+  padding: $spacingMedium;
+  color: $colorTextDark;
+  border-radius: 5px;
+  border: 1px solid $colorDivider;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+
+  :global {
+    .title {
+      color: $colorTextLight;
+      line-height: $fontExtraExtraSmall;
+      font-size: $fontExtraExtraSmall;
+      padding: 0 $spacingXxsmall;
+      position: absolute;
+      top: -$fontExtraExtraSmall / 2;
+      left: $spacingMedium;
+      background: $colorPrimaryBackground;
+    }
+
+    .layout-placeholder {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.activeSelectBox {
+  border: 1px solid $colorActive;
+
+  :global {
+    .title {
+      color: $colorActive;
+    }
+  }
+}
+
+.icon {
+  margin-left: $spacingMedium;
+  transition: all 0.3s linear;
+  transform: rotate(0deg);
+}
+
+.activeIcon {
+  transform: rotate(180deg);
+}
+
+.selectList {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background: $colorSecondaryBackground;
+  padding: $spacingXsmall 0;
+  border-radius: 5px;
+  box-shadow: $Shadow;
+
+  :global {
+    .selectItem {
+      padding: $spacingSmall $spacingMedium;
+
+      &:hover {
+        background: $colorTextUltraLight;
+      }
+
+      &.active {
+        background: $colorActiveOpacity;
+      }
+    }
+  }
+}

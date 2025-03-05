@@ -1,0 +1,82 @@
+@import "~/styles/variables.module.scss";
+
+.tabList {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid $colorDivider;
+  position: relative;
+}
+
+.tabItem {
+  position: relative;
+  overflow: hidden;
+
+  :global {
+    .text {
+      color: $colorTextMedium;
+      font-size: $fontSmall;
+      line-height: $fontSmall;
+      padding: $spacingMedium;
+      cursor: pointer;
+      z-index: 2;
+      position: relative;
+    }
+
+    .click-style {
+      background: $colorActiveOpacity;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1;
+      visibility: hidden;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.smallTabItem {
+  :global {
+    .text {
+      font-size: $fontExtraSmall;
+      line-height: $fontExtraSmall;
+    }
+  }
+}
+
+.activeTabItem {
+  :global {
+    .text {
+      color: $colorActive;
+    }
+  }
+}
+
+.activeClickStyle {
+  visibility: visible !important;
+  animation: ripple 0.5s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+.activeBar {
+  position: absolute;
+  bottom: 0;
+  height: $spacingXxsmall;
+  background: $colorActive;
+  transition: all 0.3s linear;
+}
