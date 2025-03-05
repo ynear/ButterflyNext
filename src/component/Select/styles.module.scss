@@ -1,0 +1,80 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.selectBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: variables.$fontSmall;
+  font-size: variables.$fontSmall;
+  padding: variables.$spacingMedium;
+  color: variables.$colorTextDark;
+  border-radius: 5px;
+  border: 1px solid variables.$colorDivider;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+
+  :global {
+    .title {
+      color: variables.$colorTextLight;
+      line-height: variables.$fontExtraExtraSmall;
+      font-size: variables.$fontExtraExtraSmall;
+      padding: 0 variables.$spacingXxsmall;
+      position: absolute;
+      top: calc(variables.$fontExtraExtraSmall / 2 * -1);
+      left: variables.$spacingMedium;
+      background: variables.$colorPrimaryBackground;
+    }
+
+    .layout-placeholder {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.activeSelectBox {
+  border: 1px solid variables.$colorActive;
+
+  :global {
+    .title {
+      color: variables.$colorActive;
+    }
+  }
+}
+
+.icon {
+  margin-left: variables.$spacingMedium;
+  transition: all 0.3s linear;
+  transform: rotate(0deg);
+}
+
+.activeIcon {
+  transform: rotate(180deg);
+}
+
+.selectList {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background: variables.$colorSecondaryBackground;
+  padding: variables.$spacingXsmall 0;
+  border-radius: 5px;
+  box-shadow: variables.$Shadow;
+
+  :global {
+    .selectItem {
+      padding: variables.$spacingSmall variables.$spacingMedium;
+
+      &:hover {
+        background: variables.$colorTextUltraLight;
+      }
+
+      &.active {
+        background: variables.$colorActiveOpacity;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.button {
+  color: variables.$colorBackground;
+  font-size: variables.$fontExtraSmall;
+  line-height: variables.$fontSmall;
+  padding: variables.$spacingSmall variables.$spacingMedium;
+  cursor: pointer;
+  background: variables.$colorActive;
+  border-radius: 5px;
+  border: none;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:active {
+  opacity: 0.7;
+}

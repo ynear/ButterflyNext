@@ -1,0 +1,177 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: variables.$spacingMedium;
+  position: relative;
+  color: variables.$colorTextDark;
+  user-select: none;
+}
+
+.startBtn {
+  position: absolute;
+  top: calc(variables.$spacingMedium * 2 - variables.$spacingSmall);
+  right: variables.$spacingMedium;
+  z-index: 10;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: variables.$spacingMedium;
+  overflow: hidden;
+}
+
+.inputBox {
+  display: flex;
+
+  :global {
+    .method-select {
+      border-radius: 5px 0 0 5px;
+    }
+
+    .url-input {
+      flex: 1;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .curl-parse-btn {
+      margin-left: variables.$spacingSmall;
+    }
+  }
+}
+
+.introduce {
+  border-top: 1px solid variables.$colorDivider;
+  margin-top: variables.$spacingXlarge;
+  padding-top: variables.$spacingMedium;
+  font-size: variables.$fontSmall;
+  overflow-y: auto;
+
+  :global {
+    span {
+      color: variables.$colorActiveOpacity;
+      font-weight: 700;
+      padding: 0 variables.$spacingXxsmall;
+
+      &.normal {
+        color: variables.$colorTextDark;
+        font-weight: normal;
+        padding: 0;
+      }
+    }
+
+    .text {
+      font-size: variables.$fontMedium;
+      margin-bottom: variables.$spacingMedium;
+      white-space: pre-wrap;
+    }
+
+    .example-payload,
+    .example-flag {
+      font-size: variables.$fontSmall;
+      line-height: calc(variables.$fontSmall * 2);
+    }
+
+    table {
+      margin-top: variables.$spacingSmall;
+      width: variables.$spacingXxlWidth;
+      border-collapse: separate;
+      border-spacing: 0px;
+      border-bottom: 1px solid rgb(81, 81, 81);
+
+      tr {
+        color: inherit;
+        display: table-row;
+        vertical-align: middle;
+        outline: 0px;
+      }
+
+      th {
+        font-weight: 500;
+        border-bottom: 1px solid rgb(81, 81, 81);
+        text-align: left;
+        line-height: calc(variables.$fontSmall * 2);
+        padding: 0 variables.$spacingMedium;
+        background: variables.$colorSecondaryBackground;
+      }
+
+      td {
+        text-align: left;
+        line-height: calc(variables.$fontSmall * 2);
+        padding: 0 variables.$spacingMedium;
+      }
+    }
+  }
+}
+
+.requestContent {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  padding-top: variables.$spacingMedium;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  :global {
+    .requestOptions {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+}
+
+.settingParamGroup {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  :global {
+    .title {
+      font-size: variables.$fontMedium;
+      padding: variables.$spacingXsmall 0;
+    }
+
+    .items,
+    .sub-items {
+      display: flex;
+      align-items: center;
+      padding: variables.$spacingXsmall 0;
+
+      .sub-title {
+        width: calc(variables.$spacingGuttersmall + variables.$spacingGutter);
+      }
+
+      .margin-left {
+        margin-left: variables.$spacingSmall;
+      }
+
+      .margin-right {
+        margin-right: variables.$spacingSmall;
+      }
+    }
+
+    .sub-items {
+      padding-left: calc(
+        variables.$spacingGuttersmall + variables.$spacingGutter
+      );
+    }
+  }
+}

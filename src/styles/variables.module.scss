@@ -1,0 +1,115 @@
+// font-size
+$fontExtraExtraLarge: 40px;
+$fontExtraLarge: 36px;
+$fontLarge: 24px;
+$fontMedium: 20px;
+$fontSmall: 16px;
+$fontExtraSmall: 14px;
+$fontExtraExtraSmall: 12px;
+
+// spacing
+$spacingXxsmall: 4px;
+$spacingXsmall: 8px;
+$spacingSmall: 12px;
+$spacingMedium: 20px;
+$spacingLarge: 24px;
+$spacingXlarge: 40px;
+$spacingGuttersmall: 50px;
+$spacingGutter: 80px;
+$spacingHeader: 10px;
+$spacingFooter: 0px;
+$spacingMaxWidth: 700px;
+$spacingHeaderTop: 25px;
+$spacingXxsWidth: 50px;
+$spacingXsWidth: 100px;
+$spacingWidth: 200px;
+$spacingLWidth: 300px;
+$spacingXlWidth: 400px;
+$spacingXxlWidth: 500px;
+
+// color
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+$colorTransparentBlack: rgba(0, 0, 0, 0.4);
+$colorPrimary: #2d7ef7;
+$colorPrimaryOpacity: rgba(45, 126, 247, 0.5);
+$colorActive: #1de9b6;
+$colorActiveOpacity: rgba(29, 233, 182, 0.5);
+$colorGreen: #51dd84;
+$colorRed: #fd6478;
+$colorYellow: #ffdb3d;
+$colorOrange: #feaf39;
+$colorPurple: #9582f5;
+$colorTeal: #7fe4ea;
+$colorTextUltraLight: #666666;
+$colorTextLight: #999999;
+$colorTextMedium: #cecece;
+$colorTextDark: #ffffff;
+$colorPrimaryBackground: #171717;
+$colorSecondaryBackground: #262626;
+$colorCard: #252525;
+$colorOrangeLight: #423627;
+$colorRedLight: #2f2123;
+$colorGreenLight: #2b2e2c;
+$colorDivider: #323233;
+$colorBackground: #121212;
+$colorStatusBarColor: #1641d6;
+
+// shadow
+$Shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+:export {
+  fontExtraExtraLarge: $fontExtraExtraLarge;
+  fontExtraLarge: $fontExtraLarge;
+  fontLarge: $fontLarge;
+  fontMedium: $fontMedium;
+  fontSmall: $fontSmall;
+  fontExtraSmall: $fontExtraSmall;
+  fontExtraExtraSmall: $fontExtraExtraSmall;
+  spacingXxsmall: $spacingXxsmall;
+  spacingXsmall: $spacingXsmall;
+  spacingSmall: $spacingSmall;
+  spacingMedium: $spacingMedium;
+  spacingLarge: $spacingLarge;
+  spacingXlarge: $spacingXlarge;
+  spacingGuttersmall: $spacingGuttersmall;
+  spacingGutter: $spacingGutter;
+  spacingHeader: $spacingHeader;
+  spacingFooter: $spacingFooter;
+  spacingMaxWidth: $spacingMaxWidth;
+  spacingHeaderTop: $spacingHeaderTop;
+  spacingXxsWidth: $spacingXxsWidth;
+  spacingXsWidth: $spacingXsWidth;
+  spacingWidth: $spacingWidth;
+  spacingLWidth: $spacingLWidth;
+  spacingXlWidth: $spacingXlWidth;
+  spacingXxlWidth: $spacingXxlWidth;
+  colorWhite: $colorWhite;
+  colorBlack: $colorBlack;
+  colorTransparentBlack: $colorTransparentBlack;
+  colorPrimary: $colorPrimary;
+  colorPrimaryOpacity: $colorPrimaryOpacity;
+  colorActive: $colorActive;
+  colorActiveOpacity: $colorActiveOpacity;
+  colorGreen: $colorGreen;
+  colorRed: $colorRed;
+  colorYellow: $colorYellow;
+  colorOrange: $colorOrange;
+  colorPurple: $colorPurple;
+  colorTeal: $colorTeal;
+  colorTextUltraLight: $colorTextUltraLight;
+  colorTextLight: $colorTextLight;
+  colorTextMedium: $colorTextMedium;
+  colorTextDark: $colorTextDark;
+  colorPrimaryBackground: $colorPrimaryBackground;
+  colorSecondaryBackground: $colorSecondaryBackground;
+  colorCard: $colorCard;
+  colorOrangeLight: $colorOrangeLight;
+  colorRedLight: $colorRedLight;
+  colorGreenLight: $colorGreenLight;
+  colorDivider: $colorDivider;
+  colorBackground: $colorBackground;
+  colorStatusBarColor: $colorStatusBarColor;
+  shadow: $Shadow;
+}

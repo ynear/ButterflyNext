@@ -1,0 +1,38 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.navBar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: variables.$colorSecondaryBackground;
+}
+
+.navBarItem {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: none;
+
+  :global .note {
+    display: none;
+    position: absolute;
+    left: 50px;
+    white-space: nowrap;
+    font-size: variables.$fontExtraExtraSmall;
+    padding: 4px;
+    border: 1px solid #fff;
+    z-index: 100;
+    background: variables.$colorPrimaryBackground;
+  }
+}
+
+.active {
+  background: variables.$colorActive;
+}
+
+.navBarItem:hover :global .note {
+  display: block;
+}

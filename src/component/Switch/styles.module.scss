@@ -1,0 +1,39 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.switch {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  :global {
+    .box {
+      height: variables.$spacingLarge;
+      width: calc(variables.$spacingLarge * 2);
+      border-radius: variables.$spacingLarge;
+      border: 2px solid variables.$colorDivider;
+      background: variables.$colorPrimaryBackground;
+
+      div {
+        height: variables.$spacingLarge;
+        width: variables.$spacingLarge;
+        border-radius: variables.$spacingLarge;
+        background: variables.$colorWhite;
+        box-shadow: 0 0 0 2px variables.$colorDivider;
+        transform: translateX(0);
+        transition: all 0.3s linear;
+      }
+    }
+  }
+}
+
+.enable {
+  :global {
+    .box {
+      background: variables.$colorActive;
+
+      div {
+        transform: translateX(variables.$spacingLarge);
+      }
+    }
+  }
+}

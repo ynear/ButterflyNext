@@ -1,0 +1,24 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.notification {
+  position: absolute;
+  right: variables.$spacingXlarge;
+  padding: variables.$spacingSmall variables.$spacingMedium;
+  background: variables.$colorPrimary;
+  border-radius: 5px;
+  animation: notificationPop 0.3s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+.error {
+  background: variables.$colorRed;
+}
+
+@keyframes notificationPop {
+  from {
+    top: 0px;
+  }
+  to {
+    top: calc(variables.$spacingGutter * -1);
+  }
+}

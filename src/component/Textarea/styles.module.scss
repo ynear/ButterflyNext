@@ -1,0 +1,13 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: variables.$spacingMedium;
+  border-radius: 10px;
+  background: variables.$colorSecondaryBackground;
+  resize: none;
+  color: variables.$colorTextDark;
+  line-height: variables.$fontLarge;
+  outline: none;
+}

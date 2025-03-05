@@ -1,0 +1,45 @@
+@use "~/styles/variables.module.scss" as variables;
+
+.radio {
+  display: flex;
+  align-items: center;
+  color: variables.$colorTextDark;
+  line-height: variables.$spacingLarge;
+  font-size: variables.$fontExtraSmall;
+  padding: 0 variables.$spacingXsmall;
+
+  :global {
+    div {
+      height: variables.$spacingLarge;
+      width: variables.$spacingLarge;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: calc(variables.$spacingLarge / 2);
+
+      &:hover {
+        background-color: rgba(29, 233, 182, 0.3);
+      }
+    }
+
+    span {
+      display: block;
+      height: variables.$spacingXsmall;
+      width: variables.$spacingXsmall;
+      border-radius: calc(variables.$spacingXsmall / 2);
+      background: "none";
+      box-shadow: 0 0 0 2px variables.$colorPrimaryBackground,
+        0 0 0 4px variables.$colorTextLight;
+    }
+  }
+}
+
+.active {
+  :global {
+    span {
+      background-color: variables.$colorActive;
+      box-shadow: 0 0 0 2px variables.$colorPrimaryBackground,
+        0 0 0 4px variables.$colorActive;
+    }
+  }
+}
